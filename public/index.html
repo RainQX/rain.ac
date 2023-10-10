@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>「Rain」</title>
+    <meta name="theme-color" content="#000>
+
+    <meta property=" og:title" content="「rain」" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="The game ends when the king falls, not when a pawn takes his queen" />
+    <link rel="icon" href="images/favicon.png">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    })
+
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            return false;
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 'I'.charCodeAt(0)) {
+            return false;
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 'C'.charCodeAt(0)) {
+            return false;
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 'J'.charCodeAt(0)) {
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            return false;
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 'I'.charCodeAt(0)) {
+            return false;
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 'C'.charCodeAt(0)) {
+            return false;
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 'J'.charCodeAt(0)) {
+            return false;
+        }
+    }
+    document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            return false;
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 'I'.charCodeAt(0)) {
+            return false;
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 'C'.charCodeAt(0)) {
+            return false;
+        }
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 'J'.charCodeAt(0)) {
+            return false;
+        }
+    }
+</script>
+
+<body>
+    <main>
+        <a href="boot">boss <span style="background: -webkit-radial-gradient(#ff00dd, #00ffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">&lt;3</span> you</a>
+    </main>
+</body>
+
+<script>
+    var audio = document.createElement("AUDIO")
+    document.body.appendChild(audio);
+    audio.src = "songs/audio1.mp3"
+
+    document.body.addEventListener("mousemove", function () {
+        audio.play()
+    })
+</script>
+
+</html>
