@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="preload" href="WOFF/FreeSerif-YO4a.woff" as="font" type="font/woff">
+  <link rel="preload" href="WOFF/jackeyfont.woff" as="font" type="font/woff">
+  <link rel="preload" href="css/crt.css" as="style">
+  <link rel="preload" href="css/desktop.css" as="style">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.20">
+
+  <link href="https://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet">
+  <link rel="stylesheet" href="http://site-assets.fontawesome.com/releases/v6.2.0/css/all.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/audio.js"></script>
+
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <title>「Rain」</title>
+  <meta name="theme-color" content="#000">
+
+  <meta property="og:title" content="「Rain」" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="The game ends when the king falls, not when a pawn takes his queen" />
+</head>
+
+<body>
+  <script>
+    $(function () {
+      $(".draggable").draggable({
+        start: function () {
+          $(this).css({
+            transform: "none",
+            top: $(this).offset().top + "px",
+            left: $(this).offset().left + "px"
+          });
+        }
+      });
+    });
+  </script>
+  <div id="enter">
+    <div class="window enter-screen">
+      <div class="title-bar">
+        <div class="title-bar-text">User Login</div>
+        <div class="title-bar-controls">
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-wrapper">
+        <div class="window-content">
+          <form>
+            <fieldset>
+              <legend>Login</legend>
+
+
+              <p>Select a user to login to</p>
+              <select name="wallpaper" size="1">
+                <option>Rain</option>
+              </select>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="window-actions">
+          <button class="window-action-button main">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="main">
+    <div id="desktop">
+      </br></br>
+      <center>
+        <h4 style="color: #fff">RAIN.AC</h4>
+        <h4 style="color: #fff; top: 70px !important; font-size: 0.5em !important" id="mobile-notice"></h4>
+      </center>
+
+      <div class="desktop-icons">
+        <div class="desktop-icon boss no-border" onclick="showPopup('PopUpBoss')" title="boss">
+          boss
+        </div>
+
+        <div class="desktop-icon rina RinaClose" onclick="showPopup('PopUpRina')" title="rina">
+          rina
+        </div>
+
+        <div class="desktop-icon doxes DoxesClose" onclick="showPopup('PopUpDoxes')" title="doxes">
+          Doxes
+        </div>
+
+      </div>
+      <div id="toolbar">
+        <div class="toolbar-start-menu">
+          <button class="start-button">
+            Start
+          </button>
+
+        </div>
+        <div class="toolbar-separator"></div>
+
+        <div class="toolbar-left">
+          <button class="toolbar-icon ie" onclick="showPopup('PopUpBoss')"></button>
+          <div class="window draggable" id="PopUpBoss"
+            style="margin: 32px; width: 250px; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="title-bar">
+              <div class="title-bar-text">boss</div>
+              <div class="title-bar-controls">
+                <button class="bossClose" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body">
+              <center>
+                <img src="images/boss.png" height="48px" width="48px">
+                <br>
+                <p> rape </p>
+                <a href="https://discord.com/users/653018895099363329">Discord</a>
+                <a href="https://t.me/bosslawl">Telegram</a>
+                <a href="https://x.com/bosslawlx">Twitter</a>
+                <a href="https://github.com/bosslawl">Github</a>
+                <a href="https://instagram.com/bosslawl">Instagram</a>
+                <section class="field-row" style="justify-content: center">
+                  <button class="bossOK" aria-label="OK" style="margin-top:10px;">OK</button>
+                </section>
+              </center>
+            </div>
+          </div>
+
+          <button class="toolbar-icon outlook" onclick="showPopup('PopUpRina')"></button>
+          <div class="window draggable" id="PopUpRina"
+            style="margin: 32px; width: 250px; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="title-bar">
+              <div class="title-bar-text">rina</div>
+              <div class="title-bar-controls">
+                <button class="RinaClose" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body">
+              <center>
+                <img src="images/rina.png" height="48px" width="48px">
+                <br>
+                <p> faggot </p>
+                <a href="https://discord.com/users/321381711487172638">Discord</a>
+                <a href="https://github.com/Athenua">Github</a>
+                <a href="https://instagram.com/athenuaa">Instagram</a>
+                <section class="field-row" style="justify-content: center">
+                  <button class="RInaOK" aria-label="OK" style="margin-top:10px;">OK</button>
+                </section>
+              </center>
+            </div>
+          </div>
+        
+          <button class="toolbar-icon lookout" onclick="showPopup('PopUpDoxes')"></button>
+          <div class="window draggable" id="PopUpDoxes"
+            style="margin: 32px; width: 250px; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="title-bar">
+              <div class="title-bar-text">Doxes</div>
+              <div class="title-bar-controls">
+                <button class="DoxesClose" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body">
+              <center>
+                <img src="images/vz.png" height="48px" width="48px">
+                <br>
+                <p> List of doxes </p>
+                <a href="/vz">Vzgh1 / Taylor Mutlow</a>
+                <section class="field-row" style="justify-content: center">
+                  <button class="DoxesOK" aria-label="OK" style="margin-top:10px;">OK</button>
+                </section>
+              </center>
+            </div>
+          </div>
+        </div>
+        
+        <audio id="audio" preload="none" tabindex="0">
+          <source src="songs/audio1.mp3" data-track-number="1" />
+          <source src="songs/audio2.mp3" data-track-number="2" />
+          <source src="songs/audio3.mp3" data-track-number="3" />
+          <source src="songs/audio4.mp3" data-track-number="4" />
+          <source src="songs/audio5.mp3" data-track-number="5" />
+<<<<<<< HEAD
+          <source src="songs/audio6.mp3" data-track-number="6" />
+          <source src="songs/audio7.mp3" data-track-number="7" />
+          <source src="songs/audio8.mp3" data-track-number="8" />
+          <source src="songs/audio9.mp3" data-track-number="9" />
+          <source src="songs/audio10.mp3" data-track-number="10" />
+          <source src="songs/audio11.mp3" data-track-number="11" />
+          <source src="songs/audio12.mp3" data-track-number="12" />
+          <source src="songs/audio13.mp3" data-track-number="13" />
+          <source src="songs/audio14.mp3" data-track-number="14" />
+          <source src="songs/audio15.mp3" data-track-number="15" />
+          <source src="songs/audio16.mp3" data-track-number="16" />
+          <source src="songs/audio17.mp3" data-track-number="17" />
+          <source src="songs/audio18.mp3" data-track-number="18" />
+          <source src="songs/audio19.mp3" data-track-number="19" />
+          <source src="songs/audio20.mp3" data-track-number="20" />
+          <source src="songs/audio21.mp3" data-track-number="21" />
+          <source src="songs/audio22.mp3" data-track-number="22" />
+          <source src="songs/audio23.mp3" data-track-number="23" />
+          <source src="songs/audio24.mp3" data-track-number="24" />
+          <source src="songs/audio25.mp3" data-track-number="25" />
+          <source src="songs/audio26.mp3" data-track-number="26" />
+          <source src="songs/audio27.mp3" data-track-number="27" />
+          <source src="songs/audio28.mp3" data-track-number="28" />
+=======
+
+>>>>>>> aabc1714d0b437ac0d9c4b7f798124d92a155c38
+        </audio>
+
+        <ul id="trackList" style="display: none;">
+          <li data-track-number="1">Lil Peep - Star Shopping</li>
+          <li data-track-number="2">James Bandz - That Mf Dog Off A Perc</li>
+          <li data-track-number="3">Odetari, 9lives - I love you hoe</li>
+          <li data-track-number="4">Ken Carson - Yale</li>
+          <li data-track-number="5">Chief Keef - I Don't Like</li>
+<<<<<<< HEAD
+          <li data-track-number="6">Luci4 - Dead n Gone</li>
+          <li data-track-number="7">d4vd - Romantic Homicide</li>
+          <li data-track-number="8">Ice Spice - Deli</li>
+          <li data-track-number="9">ThxsoMuch - SPIT IN MY FACE</li>
+          <li data-track-number="10">boss, Finale - BxV</li>
+          <li data-track-number="11">boss - Come cop a rain plan</li>
+          <li data-track-number="12">rina - Booters</li>
+          <li data-track-number="13">Skaiwater - #miles</li>
+          <li data-track-number="14">Taylor Swift - I knew you were trouble</li>
+          <li data-track-number="15">Lady Gaga - Bad romance</li>
+          <li data-track-number="16">Demi Lovato - Heartattack</li>
+          <li data-track-number="17">Steve Lacy - Dark Red</li>
+          <li data-track-number="18">Eminem - Stan</li>
+          <li data-track-number="19">Hoshie star - all i want is you</li>
+          <li data-track-number="20">Mariah Carey - All i want for christma</li>
+          <li data-track-number="21">Sidemen - Christmas Drillings</li>
+          <li data-track-number="22">James Bandz - Money makin'</li>
+          <li data-track-number="23">James Bandz - You're on doxbin</li>
+          <li data-track-number="24">cryp - One Kis hardstyle</li>
+          <li data-track-number="25">tana - KNOYA</li>
+          <li data-track-number="26">Rich Amiri - AINT NOTHING</li>
+          <li data-track-number="27">Lil Skies - Lust</li>
+          <li data-track-number="28">Gunna - fukumean</li>
+=======
+>>>>>>> aabc1714d0b437ac0d9c4b7f798124d92a155c38
+        </ul>
+
+        <div class="window volume" id="volume" style="position: fixed; width: 200px; display: none;">
+          <div class="title-bar">
+            <div class="title-bar-text">Volume</div>
+          </div>
+          <div class="window-body">
+            <p> Currently playing:</p>
+            <ul id="songInfo">
+              <li id="songTitle">Lil Peep - Star Shopping</li>
+              <li id="songTime">0:00</li>
+              <li><input id="range26" type="range" min="0" max="50" value="50" /></li>
+            </ul>
+          </div>
+          <div class="status-bar">
+            <p id="backward" class="status-bar-field fa-solid fa-backward"></p>
+            <p id="pause" class="status-bar-field fa-solid fa-pause"></p>
+            <p id="forward" class="status-bar-field fa-solid fa-forward"></p>
+          </div>
+
+        </div>
+
+        <div class="toolbar-separator"></div>
+        <div class="toolbar-right field-row" style="width: 106px;">
+          <img src="images/sound.png" alt="Tab" onclick="togglePopup('volume')" height="24" width="">
+
+          <div class="time"><span class="hour"></span>:<span class="minutes"></span> AM</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
