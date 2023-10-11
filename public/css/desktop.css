@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Jackeyfont";
+  src: url("../WOFF/jackeyfont.woff");
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: "MS Sans Serif";
+  letter-spacing: 0.001em;
+  font-size: 14px;
+  font-smooth: none;
+  width: 100vw;
+}
+
+#main {
+  z-index: 3;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#enter {
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 1;
+  height: 100vh;
+  width: 100vw;
+  cursor: pointer;
+  position: fixed;
+  text-align: center;
+  background-image: url(../images/girl.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+  color: #fff;
+  transition: opacity 0.5s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#desktop {
+  background-image: url(../images/girl.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  z-index: -300;
+}
+
+#toolbar {
+  background: #c0c0c0;
+  height: 35px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid #fff;
+}
+
+#toolbar .toolbar-start-menu {
+  float: left;
+}
+
+#toolbar .toolbar-start-menu .start-button {
+  background: url(http://win98icons.alexmeub.com/icons/png/windows-0.png) no-repeat 2px center / 24px;
+  padding-left: 28px;
+  padding-right: 5px;
+  height: 29px;
+  margin: 2px 3px;
+  font-weight: bold;
+  border: 2px solid #7c7c7c;
+  border-top-color: #fff;
+  border-left-color: #fff;
+}
+
+#toolbar .toolbar-start-menu .start-button:hover {
+  background-color: #a7a7a7;
+}
+
+#toolbar .toolbar-start-menu .start-menu-wrapper {
+  border: 2px solid #7c7c7c;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  background: #c0c0c0;
+  position: fixed;
+  left: 2px;
+  bottom: 33px;
+  width: 190px;
+  min-height: 200px;
+}
+
+#toolbar .toolbar-start-menu .start-menu-wrapper .start-menu-title {
+  height: 100%;
+  padding: 5px 5px;
+  background: linear-gradient(90deg, #00007b 0%, #00f 5%, #00007b 100%);
+  color: #fff;
+  width: 40px;
+  float: left;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: absolute;
+}
+
+#toolbar .toolbar-start-menu .start-menu-wrapper .start-menu-title span {
+  transform: rotate(-90deg);
+  transform-origin: left 0;
+  position: absolute;
+  left: 10px;
+  bottom: -10px;
+}
+
+#toolbar .toolbar-start-menu .start-menu-wrapper .start-menu {
+  margin-left: 40px;
+}
+
+#toolbar .toolbar-separator {
+  width: 2px;
+  height: 26px;
+  margin-top: 2px;
+  background: #797979;
+  float: left;
+  border-right: 1px solid #fff;
+}
+
+#toolbar .toolbar-left {
+  float: left;
+  padding: 0 5px;
+  min-width: 50px;
+}
+
+
+#toolbar .toolbar-icon {
+  background: no-repeat center / auto 20px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  margin-top: 3px;
+  margin: 3px 2px;
+  float: left;
+}
+
+#toolbar .toolbar-icon.ie {
+  background-image: url(../images/boss.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  z-index: 100 !important;
+}
+
+#toolbar .toolbar-icon.outlook {
+  background-image: url(../images/rina.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  z-index: 100 !important;
+
+}
+
+#toolbar .toolbar-icon.lookout {
+  background-image: url(../images/vz.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  z-index: 100 !important;
+
+}
+
+#toolbar .toolbar-right {
+  float: right;
+  margin: 2px 3px;
+  height: 29px;
+  border: 2px solid #7c7c7c;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+}
+
+#toolbar .toolbar-right .time {
+  padding: 6px 10px;
+}
+
+.desktop-icons .desktop-icon {
+  width: 115px;
+  height: 100px;
+  color: #fff;
+  text-align: center;
+  background: no-repeat center top;
+  padding-top: 55px;
+  margin: 10px;
+}
+
+.desktop-icons .desktop-icon.boss {
+  background-image: url(../images/boss.png);
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+  z-index: 100 !important;
+}
+
+.desktop-icons .desktop-icon.rina {
+  background-image: url(../images/rina.png);
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+}
+
+.desktop-icons .desktop-icon.doxes {
+  background-image: url(../images/vz.png);
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+}
+
+.custom-button {
+  border: none !important;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 2px;
+  font-family: "VCR OSD Mono", sans-serif;
+}
+
+.draggable {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.enter-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+
+}
+
+@media only screen and (max-width: 600px) {
+  #enter {
+    background-image: url("../images/mobile-girl.png");
+    z-index: 1;
+  }
+
+  #desktop {
+    background-image: url("../images/mobile-girl.png");
+    z-index: 1;
+  }
+
+  h4 {
+    position: absolute;
+    text-transform: uppercase !important;
+    font-size: 1em !important;
+    font-family: "VCR OSD Mono", sans-serif !important;
+    padding: 60px;
+    width: 70%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    margin-left: 150px;
+    z-index: 0;
+  }
+
+  .enter-screen {
+    width: 300px;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
+
+.volume {
+  position: fixed;
+  bottom: 34.5px;
+  right: 0;
+  z-index: -5;
+}
+
+.status-bar {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-bar-field {
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  line-height: 22px !important;
+  display: inline-block;
+}

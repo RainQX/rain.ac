@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+}
+
+body,
+html {
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+body {
+    background-color: #000;
+    color: var(--font-color);
+    font-family: Jackeyfont;
+    letter-spacing: 0.001em;
+    font-size: 14px;
+}
+
+img {
+    image-rendering: crisp-edges;
+}
+
+h1,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div,
+img {
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimizeSpeed;
+    image-rendering: optimize-contrast;
+}
+
+@font-face {
+    font-family: "Free Serif";
+    src: url(../WOFF/FreeSerif-YO4a.woff);
+}
+
+h1 {
+    font-family: "Free Serif";
+}
+
+@font-face {
+    font-family: Jackeyfont;
+    src: url(../WOFF/jackeyfont.woff);
+}
+
+a,
+p {
+    font-family: Jackeyfont;
+}
+
+:root {
+    --purplesaur: #008080;
+    --purpleHelmet: #034040;
+    --blueish: #000033;
+    --trueGreen: #034040;
+    --font-color: #ffffff;
+}
+
+desktop {
+    display: flex;
+    background-color: teal;
+}
+
+.content {
+    z-index: 13;
+    left: 72px;
+    position: relative;
+    width: 720px;
+    height: 592px;
+    border: 4px inset var(--trueGreen);
+}
+
+.icon {
+    width: 108px;
+    height: 108px;
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+}
+
+.icon p {
+    text-shadow: 4px 4px 1px #000;
+    text-align: center;
+}
+
+.icon:hover {
+    border: 2px dashed var(--trueGreen);
+}
+
+#os {
+    border: 8px ridge var(--trueGreen);
+    padding: 2em;
+    width: fit-content;
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 150px;
+    height: 10px;
+    border: 2px solid #b2b2b2;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding: 2px 1px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.box {
+    width: 9px;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            #2838c7 0,
+            #5979ef 17%,
+            #869ef3 32%,
+            #869ef3 45%,
+            #5979ef 59%,
+            #2838c7 100%);
+    display: inline-block;
+    margin-right: 2px;
+    animation: loader 2s infinite;
+    animation-timing-function: linear;
+}
+
+.logo {
+    width: 220px;
+    margin: 50px auto;
+}
+
+.logo p {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    padding-bottom: 10px;
+}
+
+.top {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+.top:after {
+    content: "\00a9";
+    font-size: 10px;
+    position: relative;
+    top: -5px;
+    margin-left: 2px;
+}
+
+.mid {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.mid span {
+    font-size: 22px;
+    display: inline-block;
+    vertical-align: top;
+    color: #ff6821;
+    margin-top: -8px;
+    font-family: Roboto, sans-serif;
+}
+
+.logo .bottom {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-left: 5px;
+}
+
+@keyframes loader {
+    0% {
+        transform: translate(-30px);
+    }
+
+    100% {
+        transform: translate(150px);
+    }
+}
+
+@media (pointer: coarse) {
+    .content {
+        width: calc(100% - 72px);
+        height: 100%;
+    }
+
+    .icon {
+        margin: 12px;
+        width: 112px;
+        height: 112px;
+        border: 4px outset var(--trueGreen);
+    }
+
+    .icon img {
+        width: 64px;
+        height: 64px;
+        margin: 4px;
+    }
+
+    .icon:active {
+        border: 4px inset var(--trueGreen);
+    }
+
+    .icon:hover {
+        border: 4px outset var(--purplesaur);
+    }
+
+    #os {
+        width: 90%;
+    }
+}
+
+@keyframes colorRotate {
+    from {
+        color: red;
+    }
+
+    10% {
+        color: orange;
+    }
+
+    50% {
+        color: #ff0;
+    }
+
+    75% {
+        color: green;
+    }
+
+    100% {
+        color: #00f;
+    }
+}
+
+.green {
+    color: #004300;
+}
+
+.red {
+    color: #9b0000;
+}
+
+@media only screen and (max-width: 600px) {
+    .text-container {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .ichi {
+        max-width: 90%;
+        left: 10px;
+        text-align: left !important;
+    }
+
+    .ichi p {
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: 1em;
+        padding-top: 10px;
+        text-align: left !important;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    .anim-typewriter {
+        animation: typing 1s steps(30, end) infinite;
+        animation-direction: normal;
+        text-align: left !important;
+        margin-left: 0;
+    }
+}
