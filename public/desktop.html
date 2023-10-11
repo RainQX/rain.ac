@@ -189,7 +189,6 @@
           <source src="songs/audio3.mp3" data-track-number="3" />
           <source src="songs/audio4.mp3" data-track-number="4" />
           <source src="songs/audio5.mp3" data-track-number="5" />
-<<<<<<< HEAD
           <source src="songs/audio6.mp3" data-track-number="6" />
           <source src="songs/audio7.mp3" data-track-number="7" />
           <source src="songs/audio8.mp3" data-track-number="8" />
@@ -213,9 +212,7 @@
           <source src="songs/audio26.mp3" data-track-number="26" />
           <source src="songs/audio27.mp3" data-track-number="27" />
           <source src="songs/audio28.mp3" data-track-number="28" />
-=======
 
->>>>>>> aabc1714d0b437ac0d9c4b7f798124d92a155c38
         </audio>
 
         <ul id="trackList" style="display: none;">
@@ -224,7 +221,6 @@
           <li data-track-number="3">Odetari, 9lives - I love you hoe</li>
           <li data-track-number="4">Ken Carson - Yale</li>
           <li data-track-number="5">Chief Keef - I Don't Like</li>
-<<<<<<< HEAD
           <li data-track-number="6">Luci4 - Dead n Gone</li>
           <li data-track-number="7">d4vd - Romantic Homicide</li>
           <li data-track-number="8">Ice Spice - Deli</li>
@@ -248,8 +244,6 @@
           <li data-track-number="26">Rich Amiri - AINT NOTHING</li>
           <li data-track-number="27">Lil Skies - Lust</li>
           <li data-track-number="28">Gunna - fukumean</li>
-=======
->>>>>>> aabc1714d0b437ac0d9c4b7f798124d92a155c38
         </ul>
 
         <div class="window volume" id="volume" style="position: fixed; width: 200px; display: none;">
@@ -269,9 +263,25 @@
             <p id="pause" class="status-bar-field fa-solid fa-pause"></p>
             <p id="forward" class="status-bar-field fa-solid fa-forward"></p>
           </div>
-
         </div>
 
+        <script>   
+            let audioElement = document.getElementById('audio');
+            let trackList = document.getElementById('trackList').children;
+            let currentTrack = 0;
+            
+            audioElement.onended = function() {
+                currentTrack++;
+                if (currentTrack >= trackList.length) {
+                    currentTrack = 0; // Loop back to the first track
+                }
+                let nextTrack = trackList[currentTrack].getAttribute('data-track-number');
+                let nextSource = `songs/audio${nextTrack}.mp3`;
+                audioElement.src = nextSource;
+                audioElement.play();
+            };
+        </script>
+        
         <div class="toolbar-separator"></div>
         <div class="toolbar-right field-row" style="width: 106px;">
           <img src="images/sound.png" alt="Tab" onclick="togglePopup('volume')" height="24" width="">
