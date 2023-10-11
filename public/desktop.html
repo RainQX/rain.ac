@@ -269,16 +269,21 @@
             let audioElement = document.getElementById('audio');
             let trackList = document.getElementById('trackList').children;
             let currentTrack = 0;
-            
+            let songTitleElement = document.getElementById('songTitle');
+
             audioElement.onended = function() {
                 currentTrack++;
                 if (currentTrack >= trackList.length) {
                     currentTrack = 0; // Loop back to the first track
                 }
-                let nextTrack = trackList[currentTrack].getAttribute('data-track-number');
+                let nextTrackElement = trackList[currentTrack];
+                let nextTrack = nextTrackElement.getAttribute('data-track-number');
                 let nextSource = `songs/audio${nextTrack}.mp3`;
                 audioElement.src = nextSource;
                 audioElement.play();
+
+                // Update song title in the viewer
+                songTitleElement.textContent = nextTrackElement.textContent;
             };
         </script>
         
