@@ -267,26 +267,32 @@
         </div>
 
         <script>   
-            let audioElement = document.getElementById('audio');
-            let trackList = document.getElementById('trackList').children;
-            let currentTrack = 0;
-            let songTitleElement = document.getElementById('songTitle');
-
-            audioElement.onended = function() {
-                currentTrack++;
-                if (currentTrack >= trackList.length) {
-                    currentTrack = 0; // Loop back to the first track
-                }
-                let nextTrackElement = trackList[currentTrack];
-                let nextTrack = nextTrackElement.getAttribute('data-track-number');
-                let nextSource = `songs/audio${nextTrack}.mp3`;
-                audioElement.src = nextSource;
-                audioElement.play();
-
-                // Update song title in the viewer
-                songTitleElement.textContent = nextTrackElement.textContent;
-            };
-        </script>
+          let audioElement = document.getElementById('audio');
+          let trackList = document.getElementById('trackList').children;
+          let currentTrack = 0;
+          let songTitleElement = document.getElementById('songTitle');
+          let playedTracks = [];
+  
+          audioElement.onended = function() {
+              playedTracks.push(currentTrack);
+              do {
+                  currentTrack++;
+                  if (currentTrack >= trackList.length) {
+                      currentTrack = 0; // Loop back to the first track
+                      playedTracks = []; // Clear played tracks
+                  }
+              } while (playedTracks.includes(currentTrack));
+  
+              let nextTrackElement = trackList[currentTrack];
+              let nextTrack = nextTrackElement.getAttribute('data-track-number');
+              let nextSource = `songs/audio${nextTrack}.mp3`;
+              audioElement.src = nextSource;
+              audioElement.play();
+  
+              // Update song title in the viewer
+              songTitleElement.textContent = nextTrackElement.textContent;
+          };
+          </script>
         
         <div class="toolbar-separator"></div>
         <div class="toolbar-right field-row" style="width: 106px;">
