@@ -41,25 +41,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   audio.addEventListener("ended", function () {
-    let currentTrackNumber = Number(
-      audio.querySelector("source").getAttribute("data-track-number")
-    );
-    let nextTrackNumber = (currentTrackNumber % trackList.children.length) + 1;
-
-    audio
-      .querySelector(`source[data-track-number="${nextTrackNumber}"]`)
-      .setAttribute(
-        "src",
-        audio
-        .querySelector(`source[data-track-number="${nextTrackNumber}"]`)
-        .getAttribute("src")
-      );
-    songTitle.innerHTML = trackList.querySelector(
-      `li[data-track-number="${nextTrackNumber}"]`
-    ).innerHTML;
-    audio.load();
+    // Update currentTrack to point to the next track
+    currentTrack = (currentTrack + 1) % trackList.length;
+  
+    // Update audio source and song title for the next track
+    audio.src = document.querySelector(
+      `[data-track-number="${trackList[currentTrack].dataset.trackNumber}"]`
+    ).src;
+    songTitle.innerText = trackList[currentTrack].innerText;
+  
+    // Load and play the next track
+    audio.load(); // Ensure the new audio source is loaded
     audio.play();
   });
+  
+  
   pause.addEventListener("click", function () {
     if (audio.paused) {
       audio.play();

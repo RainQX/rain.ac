@@ -43,7 +43,7 @@ body {
   cursor: pointer;
   position: fixed;
   text-align: center;
-  background-image: url(../images/girl.jpg);
+  background-image: url(../media/girl.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -55,7 +55,7 @@ body {
 }
 
 #desktop {
-  background-image: url(../images/girl.jpg);
+  background-image: url(../media/girl.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -155,27 +155,11 @@ body {
   float: left;
 }
 
-#toolbar .toolbar-icon.ie {
-  background-image: url(../images/boss.png);
+#toolbar .toolbar-icon.main {
+  background-image: url(../media/pfp.png);
   background-repeat: no-repeat;
   background-size: 24px 24px;
   z-index: 100 !important;
-}
-
-#toolbar .toolbar-icon.outlook {
-  background-image: url(../images/rina.png);
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  z-index: 100 !important;
-
-}
-
-#toolbar .toolbar-icon.lookout {
-  background-image: url(../images/vz.png);
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  z-index: 100 !important;
-
 }
 
 #toolbar .toolbar-right {
@@ -201,23 +185,11 @@ body {
   margin: 10px;
 }
 
-.desktop-icons .desktop-icon.boss {
-  background-image: url(../images/boss.png);
+.desktop-icons .desktop-icon.main {
+  background-image: url(../media/pfp.png);
   background-repeat: no-repeat;
   background-size: 48px 48px;
   z-index: 100 !important;
-}
-
-.desktop-icons .desktop-icon.rina {
-  background-image: url(../images/rina.png);
-  background-repeat: no-repeat;
-  background-size: 48px 48px;
-}
-
-.desktop-icons .desktop-icon.doxes {
-  background-image: url(../images/vz.png);
-  background-repeat: no-repeat;
-  background-size: 48px 48px;
 }
 
 .custom-button {
@@ -249,12 +221,12 @@ h4 {
 
 @media only screen and (max-width: 600px) {
   #enter {
-    background-image: url("../images/mobile-girl.png");
+    background-image: url("../media/mobile-girl.png");
     z-index: 1;
   }
 
   #desktop {
-    background-image: url("../images/mobile-girl.png");
+    background-image: url("../media/mobile-girl.png");
     z-index: 1;
   }
 

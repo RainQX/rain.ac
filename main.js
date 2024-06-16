@@ -16,12 +16,4 @@ app.get('/desktop', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/desktop.html'));
 });
 
-app.get('/vz', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/vz.html'));
-});
-
-app.get('/declan', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/declan.html'));
-});
-
-app.listen(3001, () => console.log(`Server started on port 3001`));
+app.listen(80, () => console.log(`Server started on port 80`));

@@ -29,9 +29,7 @@ function addPopupListeners(popupId, closeBtnClass, okBtnClass) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  addPopupListeners("PopUpBoss", "bossClose", "bossOK");
-  addPopupListeners("PopUpRina", "RinaClose", "RInaOK");
-  addPopupListeners("PopUpDoxes", "DoxesClose", "DoxesOK");
+  addPopupListeners("PopUpMain", "MainClose", "MainOK");
 });
 
 let date = new Date();
@@ -63,9 +61,9 @@ if (window.matchMedia("(max-width: 767px)").matches) {
     button.addEventListener('click', function () {
       counter++;
       if (counter % 2 === 1) {
-        desktop.style.backgroundImage = 'url(../images/retard.png)';
+        desktop.style.backgroundImage = 'url(../media/alternate.jpg)';
       } else {
-        desktop.style.backgroundImage = 'url(../images/girl.jpg)';
+        desktop.style.backgroundImage = 'url(../media/girl.jpg)';
       }
     });
   });
