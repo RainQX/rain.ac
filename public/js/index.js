@@ -55,17 +55,39 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 } else {
   document.addEventListener("DOMContentLoaded", function () {
     let button = document.querySelector('.start-button');
-    let counter = 0;
     let desktop = document.querySelector('#desktop');
-
-    button.addEventListener('click', function () {
-      counter++;
-      if (counter % 2 === 1) {
-        desktop.style.backgroundImage = 'url(../media/alternate.jpg)';
-      } else {
+    let videoElement = document.createElement('video');
+    videoElement.id = 'videoPlayer';
+    desktop.appendChild(videoElement);
+  
+    const videos = ['../media/video1.mp4', '../media/video2.mp4'];
+    let isPlayingVideo = false;
+  
+    function toggleVideoAndImage() {
+      if (isPlayingVideo) {
+        // Switch to image
+        videoElement.style.display = 'none';
         desktop.style.backgroundImage = 'url(../media/girl.jpg)';
+        isPlayingVideo = false;
+      } else {
+        // Switch to video
+        desktop.style.backgroundImage = 'none';
+        videoElement.style.display = 'block';
+        let randomIndex = Math.floor(Math.random() * videos.length);
+        videoElement.src = videos[randomIndex];
+        videoElement.play();
+        isPlayingVideo = true;
       }
+    }
+  
+    button.addEventListener('click', toggleVideoAndImage);
+  
+    videoElement.addEventListener('ended', function() {
+      toggleVideoAndImage();
     });
+  
+    // Initially set the background to girl.jpg
+    desktop.style.backgroundImage = 'url(../media/girl.jpg)';
   });
 }
 
